@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+    <style>
+        body {
+            background-color: darkgray;
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Olá mundo</h1>
+    <p id="teste">Estou aprendendo a manipular dados com <strong>DOM</strong></p>
+    <div>Clique em mim</div> <br>
+    
+    
+</body>
+</html>
+<script>
+    var p1 = window.document.getElementById('teste')
+    var t1 = window.document.getElementsByTagName('h1')[0]
+    /* window.document.write(p1.innerText) 
+    window.document.write('Estou puxando isto: ' + p1.innerHTML) */
+    /* document.write(t1.innerHTML) */
+    document.write(p1.innerHTML)
+    
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treino</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="caixa1" id="icaixa1">
+    <input type="number" name="caixa2" id="icaixa2">
+    <input type="button" value="Somar" onclick="somar ()">
+    <div id="res">Resultado</div>
+    
+    <script>
+        function somar() {
+        var caixa1 = window.document.getElementById ('icaixa1')
+        var caixa2 = window.document.getElementById ('icaixa2')
+        var res = window.document.getElementById ('res')
+        var n1 = Number (caixa1.value)
+        var n2 = Number (caixa2.value)
+        var t = n1 + n2
+        res.innerHTML = `O total da soma de ${n1} + ${n2} é de ${t}`
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+<style>
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.1em;
+    }
+    input {
+        width: 80px;
+    }
+    div#res {
+        padding-top: 10px;
+    }
+</style>
+</head>
+<body>
+    <h1>Calculadora</h1>
+    <input type="number" name="caixa1" id="icaixa1"> +
+    <input type="number" name="caixa2" id="icaixa2">
+    <input type="button" value="Somar" onclick="somar()">
+    <br><div id="res">Resultado</div>
+    <script>
+        function somar() {
+        var caixa1 = window.document.getElementById('icaixa1')
+        var caixa2 = window.document.getElementById('icaixa2')
+        var res = window.document.getElementById ('res')
+        var n1 = Number(caixa1.value)
+        var n2 = Number(caixa2.value)
+        var t = n1 + n2
+        res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong>${t}</strong>`
+        }
+    </script>
+</body>
+</html>

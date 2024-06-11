@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Em qual país você nasceu? <input type="text" name="caixa" id="icaixa">
+    <input type="button" value="Enviar" onclick="enviar()">
+    <p id="res">
+
+    </p>
+    
+<script>
+    function enviar() {
+        var caixa = window.document.getElementById ('icaixa')
+        var pais = String(caixa.value)
+        var res = window.document.getElementById('res')
+        res.innerHTML = (`Seu pais é <strong>${pais}</strong>`)
+        if (pais == 'Brasil') {
+            res.innerHTML += ('<p>Você é <strong>brasileiro!</strong></p>')
+        }
+        else {
+            res.innerHTML += ('<p>Você é<strong> gringo!</strong></p>')
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radar</title>
+</head>
+<body>
+    <h1>Sistema de Multas</h1>
+    Velocidade do carro: <input type="number" name="caixa" id="icaixa">Km/h
+    <input type="button" value="Verificar" onclick="radar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function radar() {
+            var caixa = window.document.getElementById('icaixa')
+            var res = window.document.getElementById('res')
+            var velocidade = Number(caixa.value)
+            res.innerHTML = `<p>A sua velocidade atual é de ${velocidade}Km/h</p>`
+            if (velocidade >60){
+                res.innerHTML += (`<p>A sua velocidade é de ${velocidade}Km/h e você foi <strong>MULTADO!</strong></p>`)
+            }
+            else {
+                res.innerHTML += (`<p>A sua velocidade de ${velocidade}Km/h está adequada para as condições da rodovia.</p>`)
+            }
+            res.innerHTML += `<p>Diriga sempre com o cinto de Segurança</p>`
+        }
+    </script>
+</body>
+</html>
